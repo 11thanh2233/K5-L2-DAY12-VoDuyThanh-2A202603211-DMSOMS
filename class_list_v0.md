@@ -1,4 +1,4 @@
-# Danh sách lớp v0 — Võ Duy Thanh · G11
+# Danh sách lớp v0 — Võ Duy Thành · G11
 
 Viết tiếp từ slide 54 bài giảng. Mỗi lớp trả lời: **model cần nhận ra cái này để làm gì?**
 

@@ -1,4 +1,4 @@
-# Tự đánh giá — Võ Duy Thanh · G11
+# Tự đánh giá — Võ Duy Thành · G11
 
 ## 1. Tự rà soát 4 cảnh
 
