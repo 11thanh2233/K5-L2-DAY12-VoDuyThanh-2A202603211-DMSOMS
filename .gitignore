@@ -11,3 +11,5 @@ __pycache__/
 *.pyc
 .DS_Store
 .env*
+# Gói ảnh nhóm (chứa ảnh cabin)
+G[0-9][0-9].zip
