@@ -7,7 +7,7 @@ Viết tiếp từ slide 54 bài giảng. Mỗi lớp trả lời: **model cần
 | # | Lớp / thuộc tính | Giá trị | Để làm gì (chức năng DMS) | Nhìn thấy được trên IR? |
 |---|---|---|---|---|
 | 1 | eye_state (từng mắt) | open / closed / unknown | Phát hiện buồn ngủ: đo PERCLOS, thời gian nhắm mắt liên tục | Có; mất khi đốm phản xạ LED trên mắt/kính (D06) hoặc tóc che (D05) |
-| 2 | gaze_zone | road, mirror_l/r/c, cluster, center, lap, other | Cảnh báo mất tập trung: tính thời gian rời mắt khỏi đường | Có khi thấy mặt; mất khi quay hẳn đầu (D02 không có box face) |
+| 2 | gaze_zone | road, mirror_l/r/c, cluster, center, lap, other | Cảnh báo mất tập trung: tính thời gian rời mắt khỏi đường | Có khi thấy mặt; quay hẳn đầu thì mất (D02: 12/13 điểm mặt bị che, gaze=other) |
 | 3 | head_pose (yaw/pitch, suy từ face13) | góc độ | Hỗ trợ gaze khi không thấy mắt; phát hiện gục đầu | Có, 13 điểm mặt vẫn đặt được trên NIR (D01, D04, D06) |
 | 4 | phone | held / mounted / lap | Cảnh báo dùng điện thoại khi lái (gọi điện, nhắn tin) | Một phần: máy tối khó tách khỏi tay; chỉ gán khi thấy cạnh máy (D04) |
 | 5 | hand.on_wheel | yes / no / unknown | Kiểm tra tài xế sẵn sàng tiếp quản ở chế độ tự lái cấp 2/3 | Có nhưng vô lăng đen phản xạ kém, cần chỉnh contrast (D02) |
@@ -34,5 +34,5 @@ Viết tiếp từ slide 54 bài giảng. Mỗi lớp trả lời: **model cần
    Bạn tạm gán thế nào và vì sao: bản đầu ghi `occupied = unknown` vì schema chưa có `yes`. Sau khi giám sát bổ sung giá trị `yes` (đã sửa nhãn CVAT và `cabin_schema.py`), bản v2 ghi `occupied = yes` cho S03, S04, S07; vẫn **không** vẽ `person` cho trẻ vì guideline chưa có quy tắc, và `infant_seat` (S02) chưa có thuộc tính occupied.
 
 2. Câu hỏi: Khi tài xế quay hẳn đầu đi (không thấy mắt lẫn mũi) thì không được vẽ `face`, nên mất luôn `gaze_zone`. Nhưng đây chính là ca mất tập trung nặng nhất mà DMS cần bắt. Có nên thêm thuộc tính trên `person`, ví dụ `head_turned = left / right / down / no`, để không mất thông tin này?
-   Khung ví dụ: G11 D02 (tài xế quay đầu sang phải, chỉ thấy gáy và tai).
-   Bạn tạm gán thế nào và vì sao: không vẽ `face` / `face13` theo §4.5; vẫn gán `person` (seat = driver, seatbelt = worn_correct) và 2 `hand`.
+   Khung ví dụ: G11 D02 (tài xế quay đầu sang phải, gần như chỉ thấy gáy và tai).
+   Bạn tạm gán thế nào và vì sao: theo review vẽ `face` và `face13` với 12/13 điểm bị che, `gaze_zone = other`; nhưng `other` lẫn ca "không chắc" với ca "quay hẳn đi", nên đề nghị thêm thuộc tính hướng đầu.

@@ -13,7 +13,7 @@ Loại lỗi: `seat_flip`, `wrong_class`, `guess`, `box`, `missing`, `extra`, `l
 | D03 | person (driver) | guess | Đổi `not_worn` → `unknown` vì đoán "đang thắt dở" từ vị trí tay; review chỉ ra thân áo thấy trọn, không có dây | Có, v2 trả lại `not_worn` (§4.7) |
 | D05 | person (driver) | guess | Ghi `not_worn` rồi `unknown`; review chỉ ra đoạn dây chéo xuống khoá hông phải thấy được | Có, v2 sửa `worn_correct` (§4.7) |
 
-Các ca kiểm lại và giữ nguyên (`ok`): ghế OMS gọi theo xe ở cả 8 cảnh (trái ảnh = `rear_right`); `face13` của D01/D04/D06 có `left_eye_*` y lớn hơn `right_eye_*`; D02 không vẽ `face` vì chỉ thấy gáy.
+Các ca kiểm lại và giữ nguyên (`ok`): ghế OMS gọi theo xe ở cả 8 cảnh (trái ảnh = `rear_right`); `face13` của D01/D04/D06 có `left_eye_*` y lớn hơn `right_eye_*`; sau review thêm `face` cho S05 và D02.
 
 ## 2. Lỗi mình lặp lại nhiều nhất hôm nay
 
