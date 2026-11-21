@@ -1,8 +1,8 @@
 File: export_final_v2.zip
 Ảnh: 22 · đã có frame_meta: 22 · số đối tượng: child_seat=14, face=12, face13=6, hand=12, infant_seat=4, object=10, person=12, phone=1
-Kết quả: 0 lỗi, 0 cảnh báo. Cảnh báo cần bạn tự xét, không tự động là sai.
+Kết quả: 0 lỗi, 0 cảnh báo.
 
-Ghi chú (Võ Duy Thanh, G11) — bản v2 sau review:
+Ghi chú (VoDuyThanh, G11) — bản v2 sau review:
 - 0 lỗi, 0 cảnh báo. cabin_schema.py đã thêm occupied=yes cho child_seat (luật bổ sung của giám sát).
 - Lấy nhãn của bản review cho 64/67 dòng bất đồng (xem disagreement_log.csv), giữ 2 ngoại lệ được giám sát đồng ý: D01 eye_right=unknown (4 điểm mắt phải bị che), D06 eye_left=unknown (đốm phản xạ LED; left_eye_upper/lower bật occluded).
 - Phần mở rộng S09–S10: export_extra.zip, check_extra.txt (0 lỗi).
