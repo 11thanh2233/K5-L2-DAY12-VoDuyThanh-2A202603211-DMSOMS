@@ -1,66 +1,66 @@
 ﻿image,label,field,issue,mine,peer,verdict,guideline_rule,action
-D01.png,face,eye_left,khác giá trị (IoU=0.70),unknown,open,peer,4.5,sửa theo review (giám sát chốt) → open
+D01.png,face,eye_left,khác giá trị (IoU=0.70),unknown,open,peer,4.5,sửa theo review → open
 D01.png,face,eye_right,khác giá trị (IoU=0.70),unknown,open,mine,"4.5, 4.6",giữ unknown: cả 4 điểm right_eye_* bị sống mũi che (bản review cũng bị cabin_check WARN) — giám sát đồng ý giữ
-D01.png,face,gaze_zone,khác giá trị (IoU=0.70),other,center,peer,4.5,sửa theo review (giám sát chốt) → center
-D02.png,hand,on_wheel,khác giá trị (IoU=0.73),yes,no,peer,4.7,sửa theo review (giám sát chốt) → no
-D02.png,hand,on_wheel,khác giá trị (IoU=0.78),yes,no,peer,4.7,sửa theo review (giám sát chốt) → no
-D02.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,peer,"4.5, 4.6",sửa theo review (giám sát chốt) → box/điểm của bản review
-D02.png,face13,count,khác số skeleton,0,1,peer,"4.5, 4.6",sửa theo review (giám sát chốt) → 1
-D03.png,person,seatbelt,khác giá trị (IoU=0.80),unknown,not_worn,peer,4.7,sửa theo review (giám sát chốt) → not_worn
-D03.png,face,glasses,khác giá trị (IoU=1.00),unknown,clear,peer,4.5,sửa theo review (giám sát chốt) → clear
-D03.png,hand,box,chỉ có ở peer (hoặc IoU thấp),,,peer,"4.4-1, 4.7",sửa theo review (giám sát chốt) → box/điểm của bản review
-D03.png,face13,left_eye_outer.occluded,khác cờ,0,1,peer,4.6,sửa theo review (giám sát chốt) → 1
-D03.png,face13,left_eye_outer.outside,khác cờ,1,0,peer,4.6,sửa theo review (giám sát chốt) → 0
-D03.png,face13,left_eye_inner.occluded,khác cờ,0,1,peer,4.6,sửa theo review (giám sát chốt) → 1
-D03.png,face13,left_eye_inner.outside,khác cờ,1,0,peer,4.6,sửa theo review (giám sát chốt) → 0
-D03.png,face13,left_eye_upper.occluded,khác cờ,0,1,peer,4.6,sửa theo review (giám sát chốt) → 1
-D03.png,face13,left_eye_upper.outside,khác cờ,1,0,peer,4.6,sửa theo review (giám sát chốt) → 0
-D03.png,face13,left_eye_lower.occluded,khác cờ,0,1,peer,4.6,sửa theo review (giám sát chốt) → 1
-D03.png,face13,left_eye_lower.outside,khác cờ,1,0,peer,4.6,sửa theo review (giám sát chốt) → 0
-D03.png,face13,nose_tip.occluded,khác cờ,1,0,peer,4.6,sửa theo review (giám sát chốt) → 0
-D03.png,face13,mouth_left.occluded,khác cờ,0,1,peer,4.6,sửa theo review (giám sát chốt) → 1
-D03.png,face13,mouth_left.outside,khác cờ,1,0,peer,4.6,sửa theo review (giám sát chốt) → 0
-D04.png,face,eye_left,khác giá trị (IoU=1.00),unknown,open,peer,4.5,sửa theo review (giám sát chốt) → open
-D04.png,face,eye_right,khác giá trị (IoU=1.00),unknown,open,peer,4.5,sửa theo review (giám sát chốt) → open
-D04.png,face13,left_eye_upper.occluded,khác cờ,0,1,peer,4.6,sửa theo review (giám sát chốt) → 1
-D04.png,face13,left_eye_lower.occluded,khác cờ,1,0,peer,4.6,sửa theo review (giám sát chốt) → 0
-D04.png,face13,right_eye_upper.occluded,khác cờ,0,1,peer,4.6,sửa theo review (giám sát chốt) → 1
-D04.png,face13,right_eye_lower.occluded,khác cờ,1,0,peer,4.6,sửa theo review (giám sát chốt) → 0
-D05.png,person,seatbelt,khác giá trị (IoU=0.76),unknown,worn_correct,peer,4.7,sửa theo review (giám sát chốt) → worn_correct
+D01.png,face,gaze_zone,khác giá trị (IoU=0.70),other,center,peer,4.5,sửa theo review → center
+D02.png,hand,on_wheel,khác giá trị (IoU=0.73),yes,no,peer,4.7,sửa theo review → no
+D02.png,hand,on_wheel,khác giá trị (IoU=0.78),yes,no,peer,4.7,sửa theo review → no
+D02.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,peer,"4.5, 4.6",sửa theo review → box/điểm của bản review
+D02.png,face13,count,khác số skeleton,0,1,peer,"4.5, 4.6",sửa theo review → 1
+D03.png,person,seatbelt,khác giá trị (IoU=0.80),unknown,not_worn,peer,4.7,sửa theo review → not_worn
+D03.png,face,glasses,khác giá trị (IoU=1.00),unknown,clear,peer,4.5,sửa theo review → clear
+D03.png,hand,box,chỉ có ở peer (hoặc IoU thấp),,,peer,"4.4-1, 4.7",sửa theo review → box/điểm của bản review
+D03.png,face13,left_eye_outer.occluded,khác cờ,0,1,peer,4.6,sửa theo review → 1
+D03.png,face13,left_eye_outer.outside,khác cờ,1,0,peer,4.6,sửa theo review → 0
+D03.png,face13,left_eye_inner.occluded,khác cờ,0,1,peer,4.6,sửa theo review → 1
+D03.png,face13,left_eye_inner.outside,khác cờ,1,0,peer,4.6,sửa theo review → 0
+D03.png,face13,left_eye_upper.occluded,khác cờ,0,1,peer,4.6,sửa theo review → 1
+D03.png,face13,left_eye_upper.outside,khác cờ,1,0,peer,4.6,sửa theo review → 0
+D03.png,face13,left_eye_lower.occluded,khác cờ,0,1,peer,4.6,sửa theo review → 1
+D03.png,face13,left_eye_lower.outside,khác cờ,1,0,peer,4.6,sửa theo review → 0
+D03.png,face13,nose_tip.occluded,khác cờ,1,0,peer,4.6,sửa theo review → 0
+D03.png,face13,mouth_left.occluded,khác cờ,0,1,peer,4.6,sửa theo review → 1
+D03.png,face13,mouth_left.outside,khác cờ,1,0,peer,4.6,sửa theo review → 0
+D04.png,face,eye_left,khác giá trị (IoU=1.00),unknown,open,peer,4.5,sửa theo review → open
+D04.png,face,eye_right,khác giá trị (IoU=1.00),unknown,open,peer,4.5,sửa theo review → open
+D04.png,face13,left_eye_upper.occluded,khác cờ,0,1,peer,4.6,sửa theo review → 1
+D04.png,face13,left_eye_lower.occluded,khác cờ,1,0,peer,4.6,sửa theo review → 0
+D04.png,face13,right_eye_upper.occluded,khác cờ,0,1,peer,4.6,sửa theo review → 1
+D04.png,face13,right_eye_lower.occluded,khác cờ,1,0,peer,4.6,sửa theo review → 0
+D05.png,person,seatbelt,khác giá trị (IoU=0.76),unknown,worn_correct,peer,4.7,sửa theo review → worn_correct
 D05.png,face,glasses,khác giá trị (IoU=1.00),none,clear,peer,4.5,sửa clear: giám sát thống nhất tài xế vẫn đeo kính
 D06.png,face,eye_left,khác giá trị (IoU=1.00),unknown,closed,mine,"4.4-1, 4.5","giữ unknown: đốm phản xạ LED che khe mắt trái, không ghi closed — giám sát đồng ý giữ"
-D06.png,face,eye_right,khác giá trị (IoU=1.00),open,closed,peer,4.5,sửa theo review (giám sát chốt) → closed
-D06.png,face,gaze_zone,khác giá trị (IoU=1.00),lap,other,peer,4.5,sửa theo review (giám sát chốt) → other
+D06.png,face,eye_right,khác giá trị (IoU=1.00),open,closed,peer,4.5,sửa theo review → closed
+D06.png,face,gaze_zone,khác giá trị (IoU=1.00),lap,other,peer,4.5,sửa theo review → other
 D06.png,face13,left_eye_lower.occluded,khác cờ,1,0,mine,4.6,giữ occluded: mép mí dưới nằm cạnh đốm phản xạ; v2 bật occluded cả left_eye_upper/lower trên điểm của bản review
 S01_ir.png,child_seat,occupied,khác giá trị (IoU=1.00),unknown,no,peer,"4.4-1, 4.8",sửa no: giám sát xác nhận ghế không có trẻ (chỉ có chăn)
-S01_ir.png,face,eye_left,khác giá trị (IoU=0.95),unknown,open,peer,4.1,sửa theo review (giám sát chốt) → open
-S01_ir.png,face,eye_right,khác giá trị (IoU=0.95),unknown,open,peer,4.1,sửa theo review (giám sát chốt) → open
-S01_ir.png,face,gaze_zone,khác giá trị (IoU=0.95),other,center,peer,4.1,sửa theo review (giám sát chốt) → center
-S01_ir.png,face,glasses,khác giá trị (IoU=0.95),unknown,none,peer,4.1,sửa theo review (giám sát chốt) → none
-S01_rgb.png,face,eye_left,khác giá trị (IoU=1.00),unknown,open,peer,4.1,sửa theo review (giám sát chốt) → open
-S01_rgb.png,face,eye_right,khác giá trị (IoU=1.00),unknown,open,peer,4.1,sửa theo review (giám sát chốt) → open
-S01_rgb.png,face,gaze_zone,khác giá trị (IoU=1.00),other,center,peer,4.1,sửa theo review (giám sát chốt) → center
-S01_rgb.png,face,glasses,khác giá trị (IoU=1.00),unknown,none,peer,4.1,sửa theo review (giám sát chốt) → none
+S01_ir.png,face,eye_left,khác giá trị (IoU=0.95),unknown,open,peer,4.1,sửa theo review → open
+S01_ir.png,face,eye_right,khác giá trị (IoU=0.95),unknown,open,peer,4.1,sửa theo review → open
+S01_ir.png,face,gaze_zone,khác giá trị (IoU=0.95),other,center,peer,4.1,sửa theo review → center
+S01_ir.png,face,glasses,khác giá trị (IoU=0.95),unknown,none,peer,4.1,sửa theo review → none
+S01_rgb.png,face,eye_left,khác giá trị (IoU=1.00),unknown,open,peer,4.1,sửa theo review → open
+S01_rgb.png,face,eye_right,khác giá trị (IoU=1.00),unknown,open,peer,4.1,sửa theo review → open
+S01_rgb.png,face,gaze_zone,khác giá trị (IoU=1.00),other,center,peer,4.1,sửa theo review → center
+S01_rgb.png,face,glasses,khác giá trị (IoU=1.00),unknown,none,peer,4.1,sửa theo review → none
 S01_rgb.png,child_seat,occupied,khác giá trị (IoU=1.00),unknown,no,peer,"4.4-1, 4.8",sửa no: giám sát xác nhận ghế không có trẻ (chỉ có chăn)
-S03_ir.png,child_seat,occupied,khác giá trị (IoU=1.00),unknown,yes,peer,4.8 (luật bổ sung occupied=yes),sửa theo review (giám sát chốt) → yes
-S03_rgb.png,child_seat,occupied,khác giá trị (IoU=1.00),unknown,yes,peer,4.8 (luật bổ sung occupied=yes),sửa theo review (giám sát chốt) → yes
-S04_ir.png,child_seat,occupied,khác giá trị (IoU=1.00),unknown,yes,peer,4.8 (luật bổ sung occupied=yes),sửa theo review (giám sát chốt) → yes
-S04_rgb.png,child_seat,occupied,khác giá trị (IoU=1.00),unknown,yes,peer,4.8 (luật bổ sung occupied=yes),sửa theo review (giám sát chốt) → yes
-S05_ir.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,peer,4.5,sửa theo review (giám sát chốt) → box/điểm của bản review
-S05_rgb.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,peer,4.5,sửa theo review (giám sát chốt) → box/điểm của bản review
-S07_ir.png,child_seat,occupied,khác giá trị (IoU=0.90),unknown,yes,peer,4.8 (luật bổ sung occupied=yes),sửa theo review (giám sát chốt) → yes
+S03_ir.png,child_seat,occupied,khác giá trị (IoU=1.00),unknown,yes,peer,4.8 (luật bổ sung occupied=yes),sửa theo review → yes
+S03_rgb.png,child_seat,occupied,khác giá trị (IoU=1.00),unknown,yes,peer,4.8 (luật bổ sung occupied=yes),sửa theo review → yes
+S04_ir.png,child_seat,occupied,khác giá trị (IoU=1.00),unknown,yes,peer,4.8 (luật bổ sung occupied=yes),sửa theo review → yes
+S04_rgb.png,child_seat,occupied,khác giá trị (IoU=1.00),unknown,yes,peer,4.8 (luật bổ sung occupied=yes),sửa theo review → yes
+S05_ir.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,peer,4.5,sửa theo review → box/điểm của bản review
+S05_rgb.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,peer,4.5,sửa theo review → box/điểm của bản review
+S07_ir.png,child_seat,occupied,khác giá trị (IoU=0.90),unknown,yes,peer,4.8 (luật bổ sung occupied=yes),sửa theo review → yes
 S07_ir.png,child_seat,occupied,khác giá trị (IoU=0.97),unknown,no,peer,"4.4-1, 4.8",sửa no: giám sát xác nhận ghế không có trẻ (chỉ có chăn)
 S07_rgb.png,child_seat,occupied,khác giá trị (IoU=0.97),unknown,no,peer,"4.4-1, 4.8",sửa no: giám sát xác nhận ghế không có trẻ (chỉ có chăn)
-S07_rgb.png,child_seat,occupied,khác giá trị (IoU=0.92),unknown,yes,peer,4.8 (luật bổ sung occupied=yes),sửa theo review (giám sát chốt) → yes
+S07_rgb.png,child_seat,occupied,khác giá trị (IoU=0.92),unknown,yes,peer,4.8 (luật bổ sung occupied=yes),sửa theo review → yes
 S08_ir.png,child_seat,occupied,khác giá trị (IoU=1.00),unknown,no,peer,"4.4-1, 4.8",sửa no: giám sát xác nhận ghế không có trẻ (chỉ có chăn)
-S08_ir.png,face,eye_left,khác giá trị (IoU=1.00),unknown,open,peer,4.1,sửa theo review (giám sát chốt) → open
-S08_ir.png,face,eye_right,khác giá trị (IoU=1.00),unknown,open,peer,4.1,sửa theo review (giám sát chốt) → open
-S08_ir.png,face,gaze_zone,khác giá trị (IoU=1.00),other,center,peer,4.1,sửa theo review (giám sát chốt) → center
-S08_ir.png,face,glasses,khác giá trị (IoU=1.00),unknown,none,peer,4.1,sửa theo review (giám sát chốt) → none
-S08_rgb.png,face,eye_left,khác giá trị (IoU=1.00),unknown,open,peer,4.1,sửa theo review (giám sát chốt) → open
-S08_rgb.png,face,eye_right,khác giá trị (IoU=1.00),unknown,open,peer,4.1,sửa theo review (giám sát chốt) → open
-S08_rgb.png,face,gaze_zone,khác giá trị (IoU=1.00),other,center,peer,4.1,sửa theo review (giám sát chốt) → center
-S08_rgb.png,face,glasses,khác giá trị (IoU=1.00),unknown,none,peer,4.1,sửa theo review (giám sát chốt) → none
+S08_ir.png,face,eye_left,khác giá trị (IoU=1.00),unknown,open,peer,4.1,sửa theo review → open
+S08_ir.png,face,eye_right,khác giá trị (IoU=1.00),unknown,open,peer,4.1,sửa theo review → open
+S08_ir.png,face,gaze_zone,khác giá trị (IoU=1.00),other,center,peer,4.1,sửa theo review → center
+S08_ir.png,face,glasses,khác giá trị (IoU=1.00),unknown,none,peer,4.1,sửa theo review → none
+S08_rgb.png,face,eye_left,khác giá trị (IoU=1.00),unknown,open,peer,4.1,sửa theo review → open
+S08_rgb.png,face,eye_right,khác giá trị (IoU=1.00),unknown,open,peer,4.1,sửa theo review → open
+S08_rgb.png,face,gaze_zone,khác giá trị (IoU=1.00),other,center,peer,4.1,sửa theo review → center
+S08_rgb.png,face,glasses,khác giá trị (IoU=1.00),unknown,none,peer,4.1,sửa theo review → none
 S08_rgb.png,child_seat,occupied,khác giá trị (IoU=1.00),unknown,no,peer,"4.4-1, 4.8",sửa no: giám sát xác nhận ghế không có trẻ (chỉ có chăn)
 D01.png,person,box,"box hẹp, cắt mất chân","[330,235,1215,915]","[193,267,1215,931]",peer,4.4-5,"sửa xtl=193, ybr=931: đùi/gối thấy được tới x≈190"
 D02.png,person,box,"box hẹp, cắt mất chân","[395,235,1100,860]","[267,235,1144,860]",peer,4.4-5,sửa theo peer: chân dưới vô lăng thấy được
