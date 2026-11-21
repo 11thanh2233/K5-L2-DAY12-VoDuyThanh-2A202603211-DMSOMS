@@ -18,7 +18,7 @@ Bạn gán nhãn **22 khung hình** cabin (tối đa 26) theo Guideline Cabin v1
 
 ## Bạn nhận được gì
 
-Repo này (tài liệu, mẫu điền, script `cabin_check`) và thư mục ảnh `Gxx/` của mã bạn được giao. Dùng gói ảnh **V2** của nhóm (`Gxx_V2.zip`) cho hướng dẫn này. Giải nén rồi chép thư mục `Gxx/` vào **trong** thư mục repo này. `.gitignore` đã chặn thư mục `G01/`…`G12/` (mẫu `G[0-9][0-9]/`) và mọi file ảnh, nên ảnh không bị commit.
+Repo này (tài liệu, mẫu điền, script `cabin_check`) và thư mục ảnh `Gxx/` của mã bạn được giao. Dùng gói ảnh của nhóm (`Gxx.zip`). Giải nén rồi chép thư mục `Gxx/` vào **trong** thư mục repo này. `.gitignore` đã chặn thư mục `G01/`…`G12/` (mẫu `G[0-9][0-9]/`) và mọi file ảnh, nên ảnh không bị commit. Chỉ chạy script trong `scripts/` của repo này, không dùng `Gxx/scripts/` trong gói (bản cũ, lỗi tiếng Việt trên Windows).
 
 ```
 K5-L2-Day12-DMS-OMS-student/
@@ -35,7 +35,7 @@ Gxx/
   oms/      S01_rgb.png, S01_ir.png … S10_rgb.png, S10_ir.png, manifest.csv   (SVIRO, BMW X5)
   driver/   D01.png … D06.png                                                   (Drive&Act, NIR)
   labels_cabin_v1.json     dán vào tab Raw khi tạo project CVAT
-  scripts/                 bản script đi kèm gói; dùng bản trong scripts/ của repo
+  scripts/                 bản cũ đi kèm gói, KHÔNG dùng; chạy scripts/ của repo
   ATTRIBUTION.txt, SOURCES.txt
 ```
 
