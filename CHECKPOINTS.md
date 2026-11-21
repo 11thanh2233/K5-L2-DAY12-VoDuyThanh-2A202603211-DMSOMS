@@ -8,7 +8,7 @@ python scripts/cabin_check.py --help
 
 macOS/Linux dùng `python3` nếu máy không có lệnh `python`.
 
-**Cách export:** trong CVAT, chọn task → **Actions** → **Export task dataset** → định dạng **CVAT for images 1.1** → **bỏ chọn "Save images"** → đặt tên file → OK → vào trang **Requests**, chờ **Finished**, bấm **⋮** → **Download**. File tải về là một zip vài chục KB. CVAT luôn export **cả task**, kể cả ảnh bạn chưa gán; vì vậy ở checkpoint bạn dùng `--only` để chỉ kiểm những ảnh đã làm.
+**Cách export:** trong CVAT, chọn task → **Actions** → **Export task dataset** → định dạng **CVAT for images 1.1** → **bỏ chọn "Save images"** → đặt tên file → OK → vào trang **Requests**, chờ **Finished**, bấm **⋮** → **Download**. File tải về là một zip vài chục KB. CVAT luôn export **cả task**, kể cả ảnh bạn chưa gán; vì vậy ở checkpoint bạn dùng `--only` để chỉ kiểm những ảnh đã làm. Gõ **đủ mã 2 chữ số** (`S01`, `D01`, không gõ `S1`); `S01` gồm cả `S01_rgb` và `S01_ir`. Mã không khớp ảnh nào thì script báo lỗi và thoát mã `2`.
 
 **Ghi kết quả ra file bằng `--out`**, không dùng `> file`. Trên Windows, `>` làm hỏng chữ tiếng Việt trong file.
 

@@ -18,7 +18,7 @@ Bạn gán nhãn **22 khung hình** cabin (tối đa 26) theo Guideline Cabin v1
 
 ## Bạn nhận được gì
 
-Repo này (tài liệu, mẫu điền, script `cabin_check`) và thư mục ảnh `Gxx/` của mã bạn được giao. Dùng gói ảnh **V2** của nhóm (`Gxx_V2.zip`) cho hướng dẫn này. Giải nén rồi chép thư mục `Gxx/` vào **trong** thư mục repo này. `.gitignore` đã chặn `G*/` và mọi file ảnh, nên ảnh không bị commit.
+Repo này (tài liệu, mẫu điền, script `cabin_check`) và thư mục ảnh `Gxx/` của mã bạn được giao. Dùng gói ảnh **V2** của nhóm (`Gxx_V2.zip`) cho hướng dẫn này. Giải nén rồi chép thư mục `Gxx/` vào **trong** thư mục repo này. `.gitignore` đã chặn thư mục `G01/`…`G12/` (mẫu `G[0-9][0-9]/`) và mọi file ảnh, nên ảnh không bị commit.
 
 ```
 K5-L2-Day12-DMS-OMS-student/

@@ -43,12 +43,23 @@ def _attrs(el):
     return {a.get("name"): (a.text or "").strip() for a in el.findall("attribute")}
 
 
+def image_code(name):
+    """'S01_rgb.png' -> 'S01', 'D03.png' -> 'D03' (the part before the first '_')."""
+    return os.path.splitext(os.path.basename(name))[0].split("_")[0].upper()
+
+
+def selected(name, only):
+    """Exact match on the image code (S01 picks S01_rgb and S01_ir, never S10) or on the full stem (S01_ir)."""
+    stem = os.path.splitext(os.path.basename(name))[0].upper()
+    return any(t.upper() in (image_code(name), stem) for t in only)
+
+
 def parse_images(root, only=None):
-    """only: list of image-name prefixes (e.g. ["S01", "D02"]); other images are skipped."""
+    """only: list of image codes (e.g. ["S01", "D02"]) or full stems ("S01_ir"); other images are skipped."""
     images = []
     for img in root.findall("image"):
         base = os.path.basename(img.get("name", ""))
-        if only and not any(base.upper().startswith(p.upper()) for p in only):
+        if only and not selected(base, only):
             continue
         rec = {"name": base, "width": float(img.get("width", 0) or 0),
                "height": float(img.get("height", 0) or 0), "boxes": [], "tags": [], "skeletons": [], "other": []}
@@ -237,6 +248,8 @@ def cmd_check(args):
     except (ET.ParseError, ValueError, OSError) as e:
         print(f"Không đọc được file: {e}")
         return 2
+    if args.only and not images:
+        return _no_match(args.only)
     manifest = load_manifest(args.manifest)
     issues = []
     rng = parse_expect(args.expect)
@@ -283,6 +296,8 @@ def cmd_diff(args):
     except (ET.ParseError, ValueError, OSError) as e:
         print(f"Không đọc được file: {e}")
         return 2
+    if args.only and not mine and not peer:
+        return _no_match(args.only)
     rows = []
     common = sorted(set(mine) & set(peer))
     for name in sorted(set(mine) ^ set(peer)):
@@ -353,6 +368,12 @@ class _Tee:
         self.file.flush()
 
 
+def _no_match(only):
+    print(f"LỖI: --only {','.join(only)} không khớp ảnh nào trong file. Gõ đủ mã ảnh 2 chữ số, "
+          "ví dụ --only S01,S02 hoặc --only D01,D02 (không gõ S1, S0).")
+    return 2
+
+
 def _only(s):
     return [p.strip() for p in s.split(",") if p.strip()] if s else None
 
@@ -369,7 +390,7 @@ def main():
     c = sub.add_parser("check", help="tự kiểm một file export")
     c.add_argument("xml")
     c.add_argument("--expect", help="số ảnh mong đợi trong file, ví dụ 22 hoặc 22-26")
-    c.add_argument("--only", type=_only, help="chỉ kiểm các ảnh có tên bắt đầu bằng, ví dụ S01,S02 (dùng ở checkpoint)")
+    c.add_argument("--only", type=_only, help="chỉ kiểm các ảnh có mã này, đủ 2 chữ số, ví dụ S01,S02 (S01 gồm S01_rgb và S01_ir)")
     c.add_argument("--out", help="ghi kết quả ra file UTF-8 (thay cho > file), ví dụ check_cpA.txt")
     c.add_argument("--manifest", help="manifest.csv từ fetch_sviro_subset.py (để biết xe nào)")
     c.add_argument("--json", help="ghi kết quả JSON")
@@ -378,16 +399,20 @@ def main():
     d.add_argument("peer")
     d.add_argument("--iou", type=float, default=0.5)
     d.add_argument("--csv", help="ghi disagreement_log.csv")
-    d.add_argument("--only", type=_only, help="chỉ so các ảnh có tên bắt đầu bằng, ví dụ S01,D01")
+    d.add_argument("--only", type=_only, help="chỉ so các ảnh có mã này, đủ 2 chữ số, ví dụ S01,D01")
     args = ap.parse_args()
     out = getattr(args, "out", None)
+    tee = _Tee(sys.stdout, out) if out else None
+    if tee:
+        sys.stdout = tee
+    try:
+        code = cmd_check(args) if args.cmd == "check" else cmd_diff(args)
+    finally:
+        if tee:
+            tee.flush()
+            tee.file.close()
+            sys.stdout = tee.console
     if out:
-        sys.stdout = _Tee(sys.stdout, out)
-    code = cmd_check(args) if args.cmd == "check" else cmd_diff(args)
-    if out:
-        sys.stdout.flush()
-        sys.stdout.file.close()
-        sys.stdout = sys.stdout.console
         print(f"Đã ghi {out}")
     sys.exit(code)
 
