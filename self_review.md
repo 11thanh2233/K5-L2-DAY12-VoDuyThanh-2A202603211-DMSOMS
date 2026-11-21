@@ -25,4 +25,4 @@ Lần sau tránh bằng cách: với dây an toàn, dò cả đường vai → h
 
 ## 3. Ghi chú về disagreement_log
 
-Dòng `S05 face box` (peer đúng, mình sai). Mình kết luận "không thấy mắt lẫn mũi" chỉ từ ảnh cỡ gốc; phóng to thì thấy rõ một mắt và miệng dưới mái tóc. Bài học: trước khi **bỏ** một đối tượng (không vẽ box) phải phóng to kiểm như khi vẽ, vì bỏ sót khó bị script phát hiện hơn vẽ sai.
+Dòng `S05 face box` (reviewer đúng, mình sai). Mình kết luận "không thấy mắt lẫn mũi" chỉ từ ảnh cỡ gốc; phóng to thì thấy rõ một mắt và miệng dưới mái tóc. Bài học: trước khi **bỏ** một đối tượng (không vẽ box) phải phóng to kiểm như khi vẽ, vì bỏ sót khó bị script phát hiện hơn vẽ sai.
