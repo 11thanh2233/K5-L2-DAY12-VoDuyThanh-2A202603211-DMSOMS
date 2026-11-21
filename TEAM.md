@@ -4,11 +4,12 @@ Mã bộ ảnh: **G11** · Hình thức: cá nhân
 
 | Họ tên | MSSV | Đã gán đủ 22 ảnh? | Review chéo với (peer diff) | Số dòng disagreement đã xử lý |
 |---|---|---|---|---|
-| Võ Duy Thanh | 2A202603211 | có | (tên bạn được coach ghép) | (điền sau review chéo) |
+| Võ Duy Thanh | 2A202603211 | có | Người giám sát (luật bổ sung: không ghép cặp, giám sát review trực tiếp) | 63 dòng diff + 4 dòng box (67) |
 
 Ca hai bạn vẫn không thống nhất và đã hỏi coach (ghi tên ảnh + đối tượng):
 
-- G11 S02, S03, S04, S07: trẻ em / em bé ngồi trong ghế trẻ em — guideline nói bộ ảnh không có trẻ em ngồi; đã báo coach, tạm không gán người.
+- G11 S02, S03, S04, S07: trẻ em / em bé ngồi trong ghế — giám sát bổ sung giá trị `occupied = yes`; S03, S04, S07 đã sửa `yes`.
+- 21 dòng `ambiguous` trong disagreement_log (mắt nhìn xuống D01/D04, cờ face13 D03/D04, ghế phủ chăn S07): giữ nhãn của mình, cần coach xác nhận.
 
 ## Cá nhân
 

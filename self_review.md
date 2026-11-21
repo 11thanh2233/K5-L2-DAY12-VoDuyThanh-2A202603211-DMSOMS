@@ -10,8 +10,8 @@ Loại lỗi: `seat_flip`, `wrong_class`, `guess`, `box`, `missing`, `extra`, `l
 |---|---|---|---|---|
 | S05_rgb | person ghế phải xe (trái ảnh) | box | Box `person` ban đầu cắt mất bàn chân ở góc dưới trái (xtl 140) | Có, xtl = 113 |
 | S06_rgb | infant_seat ghế phải xe | box | Đáy box lỏng ~20 px dưới vỏ nôi | Có, ybr 625 → 605 |
-| D03 | person (driver) | guess | Ban đầu ghi `seatbelt = not_worn`, nhưng tay trái đang ở vai phía cột B, có thể đang thắt dở → không thấy rõ | Có, đổi thành `unknown` (§4.7) |
-| D05 | person (driver) | guess | Ban đầu ghi `seatbelt = not_worn`, nhưng tóc dài che ngực, không thấy rõ có hay không có dây | Có, đổi thành `unknown` (§4.4-1) |
+| D03 | person (driver) | guess | Đổi `not_worn` → `unknown` vì đoán "đang thắt dở" từ vị trí tay; review chỉ ra thân áo thấy trọn, không có dây | Có, v2 trả lại `not_worn` (§4.7) |
+| D05 | person (driver) | guess | Ghi `not_worn` rồi `unknown`; review chỉ ra đoạn dây chéo xuống khoá hông phải thấy được | Có, v2 sửa `worn_correct` (§4.7) |
 
 Các ca kiểm lại và giữ nguyên (`ok`): ghế OMS gọi theo xe ở cả 8 cảnh (trái ảnh = `rear_right`); `face13` của D01/D04/D06 có `left_eye_*` y lớn hơn `right_eye_*`; D02 không vẽ `face` vì chỉ thấy gáy.
 
@@ -25,4 +25,4 @@ Lần sau tránh bằng cách: trước khi chọn `not_worn`, chỉ được v�
 
 ## 3. Ghi chú về disagreement_log
 
-Một dòng bạn của mình đúng và mình sai. Mình học được gì từ dòng đó: (điền sau khi review chéo với bạn cùng mã G11)
+Dòng `S05 face box` (peer đúng, mình sai). Mình kết luận "không thấy mắt lẫn mũi" chỉ từ ảnh cỡ gốc; phóng to thì thấy rõ một mắt và miệng dưới mái tóc. Bài học: trước khi **bỏ** một đối tượng (không vẽ box) phải phóng to kiểm như khi vẽ, vì bỏ sót khó bị script phát hiện hơn vẽ sai.

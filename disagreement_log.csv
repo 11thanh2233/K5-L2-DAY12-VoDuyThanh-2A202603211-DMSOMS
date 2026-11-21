@@ -1,0 +1,68 @@
+﻿image,label,field,issue,mine,peer,verdict,guideline_rule,action
+D01.png,face,eye_left,khác giá trị (IoU=0.70),unknown,open,ambiguous,4.5,"giữ unknown: mắt cúi xuống, mí trên phủ gần hết, không chắc còn khe mắt; hỏi coach"
+D01.png,face,eye_right,khác giá trị (IoU=0.70),unknown,open,mine,"4.5, 4.6",giữ unknown: cả 4 điểm right_eye_* bị sống mũi che (bản peer cũng đánh occluded và bị cabin_check WARN)
+D01.png,face,gaze_zone,khác giá trị (IoU=0.70),other,center,ambiguous,4.5,"giữ other: đang uống nước, mắt nhìn xuống chai/bảng giữa không xác định được vùng; theo 4.5 không chắc thì other"
+D02.png,hand,on_wheel,khác giá trị (IoU=0.73),yes,no,peer,4.7,"tay trái: sửa on_wheel=no, có khe hở giữa ngón tay và vành vô lăng"
+D02.png,hand,on_wheel,khác giá trị (IoU=0.78),yes,no,mine,4.7,"tay phải: giữ yes, đầu ngón chạm mép vành vô lăng"
+D02.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,mine,"4.5, 4.6","giữ: không vẽ face/face13 — chỉ thấy gáy, tai, đường hàm; mũi bị má che (bản peer 12/13 điểm cũng là occluded/outside)"
+D02.png,face13,count,khác số skeleton,0,1,mine,"4.5, 4.6","giữ: không vẽ face/face13 — chỉ thấy gáy, tai, đường hàm; mũi bị má che (bản peer 12/13 điểm cũng là occluded/outside)"
+D03.png,person,seatbelt,khác giá trị (IoU=0.80),unknown,not_worn,peer,4.7,"sửa not_worn: thân áo thấy trọn từ vai xuống hông, không có dây; 'đang thắt dở' là mình suy diễn từ vị trí tay"
+D03.png,face,glasses,khác giá trị (IoU=1.00),unknown,clear,mine,4.5,"giữ unknown: thấy gọng kính nhưng vùng mắt tối, không phân biệt được clear hay sun (NIR làm kính râm trông trong)"
+D03.png,hand,box,chỉ có ở peer (hoặc IoU thấp),,,mine,"4.4-1, 4.7","giữ: vùng box tay phải của peer chỉ là bóng tối dưới tay áo, không thấy ngón/bàn tay"
+D03.png,face13,left_eye_outer.occluded,khác cờ,0,1,ambiguous,4.6,"giữ cờ của mình: mắt trái và khóe miệng trái bị tóc/vai che, không đoán chắc vị trí nên outside; nose_tip occluded vì chỉ thấy viền"
+D03.png,face13,left_eye_outer.outside,khác cờ,1,0,ambiguous,4.6,"giữ cờ của mình: mắt trái và khóe miệng trái bị tóc/vai che, không đoán chắc vị trí nên outside; nose_tip occluded vì chỉ thấy viền"
+D03.png,face13,left_eye_inner.occluded,khác cờ,0,1,ambiguous,4.6,"giữ cờ của mình: mắt trái và khóe miệng trái bị tóc/vai che, không đoán chắc vị trí nên outside; nose_tip occluded vì chỉ thấy viền"
+D03.png,face13,left_eye_inner.outside,khác cờ,1,0,ambiguous,4.6,"giữ cờ của mình: mắt trái và khóe miệng trái bị tóc/vai che, không đoán chắc vị trí nên outside; nose_tip occluded vì chỉ thấy viền"
+D03.png,face13,left_eye_upper.occluded,khác cờ,0,1,ambiguous,4.6,"giữ cờ của mình: mắt trái và khóe miệng trái bị tóc/vai che, không đoán chắc vị trí nên outside; nose_tip occluded vì chỉ thấy viền"
+D03.png,face13,left_eye_upper.outside,khác cờ,1,0,ambiguous,4.6,"giữ cờ của mình: mắt trái và khóe miệng trái bị tóc/vai che, không đoán chắc vị trí nên outside; nose_tip occluded vì chỉ thấy viền"
+D03.png,face13,left_eye_lower.occluded,khác cờ,0,1,ambiguous,4.6,"giữ cờ của mình: mắt trái và khóe miệng trái bị tóc/vai che, không đoán chắc vị trí nên outside; nose_tip occluded vì chỉ thấy viền"
+D03.png,face13,left_eye_lower.outside,khác cờ,1,0,ambiguous,4.6,"giữ cờ của mình: mắt trái và khóe miệng trái bị tóc/vai che, không đoán chắc vị trí nên outside; nose_tip occluded vì chỉ thấy viền"
+D03.png,face13,nose_tip.occluded,khác cờ,1,0,ambiguous,4.6,"giữ cờ của mình: mắt trái và khóe miệng trái bị tóc/vai che, không đoán chắc vị trí nên outside; nose_tip occluded vì chỉ thấy viền"
+D03.png,face13,mouth_left.occluded,khác cờ,0,1,ambiguous,4.6,"giữ cờ của mình: mắt trái và khóe miệng trái bị tóc/vai che, không đoán chắc vị trí nên outside; nose_tip occluded vì chỉ thấy viền"
+D03.png,face13,mouth_left.outside,khác cờ,1,0,ambiguous,4.6,"giữ cờ của mình: mắt trái và khóe miệng trái bị tóc/vai che, không đoán chắc vị trí nên outside; nose_tip occluded vì chỉ thấy viền"
+D04.png,face,eye_left,khác giá trị (IoU=1.00),unknown,open,ambiguous,4.5,"giữ unknown: sau tròng kính và đang nhìn xuống, không thấy rõ khe mắt"
+D04.png,face,eye_right,khác giá trị (IoU=1.00),unknown,open,ambiguous,4.5,"giữ unknown: sau tròng kính và đang nhìn xuống, không thấy rõ khe mắt"
+D04.png,face13,left_eye_upper.occluded,khác cờ,0,1,ambiguous,4.6,giữ: mí trên đặt ở phía x lớn (phía trán) theo 4.6; peer đặt điểm mí trên ở gọng kính rồi đánh occluded
+D04.png,face13,left_eye_lower.occluded,khác cờ,1,0,ambiguous,4.6,giữ: mí trên đặt ở phía x lớn (phía trán) theo 4.6; peer đặt điểm mí trên ở gọng kính rồi đánh occluded
+D04.png,face13,right_eye_upper.occluded,khác cờ,0,1,ambiguous,4.6,giữ: mí trên đặt ở phía x lớn (phía trán) theo 4.6; peer đặt điểm mí trên ở gọng kính rồi đánh occluded
+D04.png,face13,right_eye_lower.occluded,khác cờ,1,0,ambiguous,4.6,giữ: mí trên đặt ở phía x lớn (phía trán) theo 4.6; peer đặt điểm mí trên ở gọng kính rồi đánh occluded
+D05.png,person,seatbelt,khác giá trị (IoU=0.76),unknown,worn_correct,peer,4.7,"sửa worn_correct: thấy đoạn dây chéo đi xuống khoá ở hông phải, đoạn qua ngực chỉ bị tóc che"
+D05.png,face,glasses,khác giá trị (IoU=1.00),none,clear,both_wrong,4.5,"sửa unknown: kính đang cầm trên tay không tính (không phải clear), nhưng vùng mắt bị tóc che nên không biết có đeo kính khác (không phải none)"
+D06.png,face,eye_left,khác giá trị (IoU=1.00),unknown,closed,mine,"4.4-1, 4.5",giữ unknown: đốm phản xạ LED trên mắt trái; ghi closed là lỗi COMMON_ERRORS 'mắt dưới đốm phản xạ'
+D06.png,face,eye_right,khác giá trị (IoU=1.00),open,closed,both_wrong,4.5,"sửa unknown: mắt nhìn xuống, không thấy rõ khe mắt (không phải open) nhưng cũng không thấy rõ hai mí khép (không phải closed)"
+D06.png,face,gaze_zone,khác giá trị (IoU=1.00),lap,other,mine,4.5,giữ lap: đầu cúi hẳn về phía hai tay đặt trên đùi
+D06.png,face13,left_eye_lower.occluded,khác cờ,1,0,mine,4.6,giữ occluded cho left_eye_lower: nằm dưới đốm phản xạ
+S01_ir.png,child_seat,occupied,khác giá trị (IoU=1.00),unknown,no,mine,"4.4-1, 4.8","giữ unknown: ghế trẻ em bị chăn phủ, không thấy bên trong (4.4-1 nêu rõ 'ghế trẻ em bị phủ: unknown')"
+S01_ir.png,face,eye_left,khác giá trị (IoU=0.95),unknown,open,mine,4.1,"giữ: OMS chỉ gán box face (4.1), thuộc tính để giá trị trung tính unknown/other; mặt nhỏ ~90 px trên ảnh dựng, không đánh giá mắt/kính/vùng nhìn"
+S01_ir.png,face,eye_right,khác giá trị (IoU=0.95),unknown,open,mine,4.1,"giữ: OMS chỉ gán box face (4.1), thuộc tính để giá trị trung tính unknown/other; mặt nhỏ ~90 px trên ảnh dựng, không đánh giá mắt/kính/vùng nhìn"
+S01_ir.png,face,gaze_zone,khác giá trị (IoU=0.95),other,center,mine,4.1,"giữ: OMS chỉ gán box face (4.1), thuộc tính để giá trị trung tính unknown/other; mặt nhỏ ~90 px trên ảnh dựng, không đánh giá mắt/kính/vùng nhìn"
+S01_ir.png,face,glasses,khác giá trị (IoU=0.95),unknown,none,mine,4.1,"giữ: OMS chỉ gán box face (4.1), thuộc tính để giá trị trung tính unknown/other; mặt nhỏ ~90 px trên ảnh dựng, không đánh giá mắt/kính/vùng nhìn"
+S01_rgb.png,face,eye_left,khác giá trị (IoU=1.00),unknown,open,mine,4.1,"giữ: OMS chỉ gán box face (4.1), thuộc tính để giá trị trung tính unknown/other; mặt nhỏ ~90 px trên ảnh dựng, không đánh giá mắt/kính/vùng nhìn"
+S01_rgb.png,face,eye_right,khác giá trị (IoU=1.00),unknown,open,mine,4.1,"giữ: OMS chỉ gán box face (4.1), thuộc tính để giá trị trung tính unknown/other; mặt nhỏ ~90 px trên ảnh dựng, không đánh giá mắt/kính/vùng nhìn"
+S01_rgb.png,face,gaze_zone,khác giá trị (IoU=1.00),other,center,mine,4.1,"giữ: OMS chỉ gán box face (4.1), thuộc tính để giá trị trung tính unknown/other; mặt nhỏ ~90 px trên ảnh dựng, không đánh giá mắt/kính/vùng nhìn"
+S01_rgb.png,face,glasses,khác giá trị (IoU=1.00),unknown,none,mine,4.1,"giữ: OMS chỉ gán box face (4.1), thuộc tính để giá trị trung tính unknown/other; mặt nhỏ ~90 px trên ảnh dựng, không đánh giá mắt/kính/vùng nhìn"
+S01_rgb.png,child_seat,occupied,khác giá trị (IoU=1.00),unknown,no,mine,"4.4-1, 4.8","giữ unknown: ghế trẻ em bị chăn phủ, không thấy bên trong (4.4-1 nêu rõ 'ghế trẻ em bị phủ: unknown')"
+S03_ir.png,child_seat,occupied,khác giá trị (IoU=1.00),unknown,yes,peer,4.8 (luật bổ sung occupied=yes),sửa occupied=yes: thấy rõ trẻ ngồi trong ghế; đã thêm yes vào nhãn CVAT và cabin_schema.py
+S03_rgb.png,child_seat,occupied,khác giá trị (IoU=1.00),unknown,yes,peer,4.8 (luật bổ sung occupied=yes),sửa occupied=yes: thấy rõ trẻ ngồi trong ghế; đã thêm yes vào nhãn CVAT và cabin_schema.py
+S04_ir.png,child_seat,occupied,khác giá trị (IoU=1.00),unknown,yes,peer,4.8 (luật bổ sung occupied=yes),sửa occupied=yes: thấy rõ trẻ ngồi trong ghế; đã thêm yes vào nhãn CVAT và cabin_schema.py
+S04_rgb.png,child_seat,occupied,khác giá trị (IoU=1.00),unknown,yes,peer,4.8 (luật bổ sung occupied=yes),sửa occupied=yes: thấy rõ trẻ ngồi trong ghế; đã thêm yes vào nhãn CVAT và cabin_schema.py
+S05_ir.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,peer,4.5,"thêm box face [278,179,333,247] cho cả S05_rgb và S05_ir: phóng to thấy một mắt, má, miệng — mình đã nhận định sai là không thấy mắt/mũi"
+S05_rgb.png,face,box,chỉ có ở peer (hoặc IoU thấp),,,peer,4.5,"thêm box face [278,179,333,247] cho cả S05_rgb và S05_ir: phóng to thấy một mắt, má, miệng — mình đã nhận định sai là không thấy mắt/mũi"
+S07_ir.png,child_seat,occupied,khác giá trị (IoU=0.90),unknown,yes,peer,4.8 (luật bổ sung occupied=yes),sửa occupied=yes: thấy rõ trẻ ngồi trong ghế; đã thêm yes vào nhãn CVAT và cabin_schema.py
+S07_ir.png,child_seat,occupied,khác giá trị (IoU=0.97),unknown,no,ambiguous,"4.4-1, 4.8","giữ unknown: chăn phủ phần đệm ngồi, không thấy hết bên trong ghế; đề nghị coach xác nhận"
+S07_rgb.png,child_seat,occupied,khác giá trị (IoU=0.97),unknown,no,ambiguous,"4.4-1, 4.8","giữ unknown: chăn phủ phần đệm ngồi, không thấy hết bên trong ghế; đề nghị coach xác nhận"
+S07_rgb.png,child_seat,occupied,khác giá trị (IoU=0.92),unknown,yes,peer,4.8 (luật bổ sung occupied=yes),sửa occupied=yes: thấy rõ trẻ ngồi trong ghế; đã thêm yes vào nhãn CVAT và cabin_schema.py
+S08_ir.png,child_seat,occupied,khác giá trị (IoU=1.00),unknown,no,mine,"4.4-1, 4.8","giữ unknown: ghế trẻ em bị chăn phủ, không thấy bên trong (4.4-1 nêu rõ 'ghế trẻ em bị phủ: unknown')"
+S08_ir.png,face,eye_left,khác giá trị (IoU=1.00),unknown,open,mine,4.1,"giữ: OMS chỉ gán box face (4.1), thuộc tính để giá trị trung tính unknown/other; mặt nhỏ ~90 px trên ảnh dựng, không đánh giá mắt/kính/vùng nhìn"
+S08_ir.png,face,eye_right,khác giá trị (IoU=1.00),unknown,open,mine,4.1,"giữ: OMS chỉ gán box face (4.1), thuộc tính để giá trị trung tính unknown/other; mặt nhỏ ~90 px trên ảnh dựng, không đánh giá mắt/kính/vùng nhìn"
+S08_ir.png,face,gaze_zone,khác giá trị (IoU=1.00),other,center,mine,4.1,"giữ: OMS chỉ gán box face (4.1), thuộc tính để giá trị trung tính unknown/other; mặt nhỏ ~90 px trên ảnh dựng, không đánh giá mắt/kính/vùng nhìn"
+S08_ir.png,face,glasses,khác giá trị (IoU=1.00),unknown,none,mine,4.1,"giữ: OMS chỉ gán box face (4.1), thuộc tính để giá trị trung tính unknown/other; mặt nhỏ ~90 px trên ảnh dựng, không đánh giá mắt/kính/vùng nhìn"
+S08_rgb.png,face,eye_left,khác giá trị (IoU=1.00),unknown,open,mine,4.1,"giữ: OMS chỉ gán box face (4.1), thuộc tính để giá trị trung tính unknown/other; mặt nhỏ ~90 px trên ảnh dựng, không đánh giá mắt/kính/vùng nhìn"
+S08_rgb.png,face,eye_right,khác giá trị (IoU=1.00),unknown,open,mine,4.1,"giữ: OMS chỉ gán box face (4.1), thuộc tính để giá trị trung tính unknown/other; mặt nhỏ ~90 px trên ảnh dựng, không đánh giá mắt/kính/vùng nhìn"
+S08_rgb.png,face,gaze_zone,khác giá trị (IoU=1.00),other,center,mine,4.1,"giữ: OMS chỉ gán box face (4.1), thuộc tính để giá trị trung tính unknown/other; mặt nhỏ ~90 px trên ảnh dựng, không đánh giá mắt/kính/vùng nhìn"
+S08_rgb.png,face,glasses,khác giá trị (IoU=1.00),unknown,none,mine,4.1,"giữ: OMS chỉ gán box face (4.1), thuộc tính để giá trị trung tính unknown/other; mặt nhỏ ~90 px trên ảnh dựng, không đánh giá mắt/kính/vùng nhìn"
+S08_rgb.png,child_seat,occupied,khác giá trị (IoU=1.00),unknown,no,mine,"4.4-1, 4.8","giữ unknown: ghế trẻ em bị chăn phủ, không thấy bên trong (4.4-1 nêu rõ 'ghế trẻ em bị phủ: unknown')"
+D01.png,person,box,"box hẹp, cắt mất chân","[330,235,1215,915]","[193,267,1215,931]",peer,4.4-5,"sửa xtl=193, ybr=931: đùi/gối thấy được tới x≈190"
+D02.png,person,box,"box hẹp, cắt mất chân","[395,235,1100,860]","[267,235,1144,860]",peer,4.4-5,sửa theo peer: chân dưới vô lăng thấy được
+D03.png,person,box,"box hẹp (chân, tóc)","[345,190,1125,955]","[271,150,1195,955]",peer,4.4-5,sửa theo peer
+D05.png,person,box,"box hẹp, cắt mất chân","[340,300,1160,850]","[148,300,1223,850]",peer,4.4-5,sửa theo peer: đùi kéo tới x≈150

@@ -31,7 +31,7 @@ Viết tiếp từ slide 54 bài giảng. Mỗi lớp trả lời: **model cần
 
 1. Câu hỏi: Guideline nói bộ ảnh "không có trẻ em ngồi" và `child_seat.occupied` không có `yes`, nhưng bộ G11 có trẻ em ngồi trong ghế trẻ em và em bé trong nôi. Cần gán thế nào: thêm `occupied = yes` và box `person` cho trẻ, hay một lớp `child` riêng?
    Khung ví dụ: G11 S04_rgb / S04_ir (ghế phải xe), cũng gặp ở S02, S03, S07.
-   Bạn tạm gán thế nào và vì sao: chỉ vẽ `child_seat` (`occupied = unknown`, vì không có giá trị `yes`) hoặc `infant_seat`, **không** vẽ `person` cho trẻ, theo GUIDE §3 "thấy hình giống trẻ em thì báo coach, không gán". Đã ghi chú vào `check_final.txt` để báo coach.
+   Bạn tạm gán thế nào và vì sao: bản đầu ghi `occupied = unknown` vì schema chưa có `yes`. Sau khi giám sát bổ sung giá trị `yes` (đã sửa nhãn CVAT và `cabin_schema.py`), bản v2 ghi `occupied = yes` cho S03, S04, S07; vẫn **không** vẽ `person` cho trẻ vì guideline chưa có quy tắc, và `infant_seat` (S02) chưa có thuộc tính occupied.
 
 2. Câu hỏi: Khi tài xế quay hẳn đầu đi (không thấy mắt lẫn mũi) thì không được vẽ `face`, nên mất luôn `gaze_zone`. Nhưng đây chính là ca mất tập trung nặng nhất mà DMS cần bắt. Có nên thêm thuộc tính trên `person`, ví dụ `head_turned = left / right / down / no`, để không mất thông tin này?
    Khung ví dụ: G11 D02 (tài xế quay đầu sang phải, chỉ thấy gáy và tai).
