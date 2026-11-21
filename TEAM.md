@@ -4,7 +4,7 @@ Mã bộ ảnh: **G11** · Hình thức: cá nhân
 
 | Họ tên | MSSV | Đã gán đủ 22 ảnh? | Review chéo với (peer diff) | Số dòng disagreement đã xử lý |
 |---|---|---|---|---|
-| Võ Duy Thành | 2A202603211 | có | Người review (luật bổ sung: không ghép cặp, người review review trực tiếp) | 67 (63 dòng diff + 4 dòng box) |
+| Võ Duy Thành | 2A202603211 | có | Người review cùng bàn | 67 (63 dòng diff + 4 dòng box) |
 
 Ca hai bạn vẫn không thống nhất và đã hỏi coach (ghi tên ảnh + đối tượng):
 
