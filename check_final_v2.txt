@@ -1,9 +1,8 @@
 File: export_final_v2.zip
-Ảnh: 22 · đã có frame_meta: 22 · số đối tượng: child_seat=14, face=11, face13=5, hand=11, infant_seat=4, object=10, person=12, phone=1
-  [WARN] D06.png: eye_right=unknown nhưng không điểm right_eye_* nào có cờ occluded/outside: nếu mắt bị che thì bật occluded, nếu thấy rõ thì chọn open/closed
-Kết quả: 0 lỗi, 1 cảnh báo. Cảnh báo cần bạn tự xét, không tự động là sai.
+Ảnh: 22 · đã có frame_meta: 22 · số đối tượng: child_seat=14, face=12, face13=6, hand=12, infant_seat=4, object=10, person=12, phone=1
+Kết quả: 0 lỗi, 0 cảnh báo. Cảnh báo cần bạn tự xét, không tự động là sai.
 
 Ghi chú (Võ Duy Thanh, G11) — bản v2 sau review:
-- [WARN] D06 eye_right=unknown: các điểm right_eye_* vẫn thấy được (mép mí, khóe mắt) nên không bật occluded; nhưng mắt nhìn xuống, không phân biệt được còn khe mắt (open) hay hai mí khép (closed), nên eye_right=unknown theo §4.5. Cảnh báo đúng là ca này, không phải lỗi.
-- cabin_schema.py đã thêm giá trị occupied=yes cho child_seat (luật bổ sung của người giám sát). S03 (rear_middle), S04 và S07 (rear_right) có trẻ ngồi: occupied=yes.
-- Sửa sau review: thêm face S05; D02 tay trái on_wheel=no; D03 seatbelt=not_worn; D05 seatbelt=worn_correct, glasses=unknown; D06 eye_right=unknown; mở rộng box person D01, D02, D03, D05 cho đủ phần chân. Chi tiết ở disagreement_log.csv.
+- 0 lỗi, 0 cảnh báo. cabin_schema.py đã thêm occupied=yes cho child_seat (luật bổ sung của giám sát).
+- Lấy nhãn của bản review cho 64/67 dòng bất đồng (xem disagreement_log.csv), giữ 2 ngoại lệ được giám sát đồng ý: D01 eye_right=unknown (4 điểm mắt phải bị che), D06 eye_left=unknown (đốm phản xạ LED; left_eye_upper/lower bật occluded).
+- Phần mở rộng S09–S10: export_extra.zip, check_extra.txt (0 lỗi).
