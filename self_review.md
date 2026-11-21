@@ -17,11 +17,11 @@ Các ca kiểm lại và giữ nguyên (`ok`): ghế OMS gọi theo xe ở cả 
 
 ## 2. Lỗi mình lặp lại nhiều nhất hôm nay
 
-Lỗi: `guess` ở `seatbelt` — ghi `not_worn` khi chỉ là *không thấy dây* (D03, D05).
+Lỗi: kết luận từ suy diễn hoặc từ ảnh chưa phóng to, thay vì từ cái thật sự nhìn thấy — `seatbelt` D03 (suy "đang thắt dở" từ vị trí tay dù thân áo thấy rõ không có dây), `seatbelt` D05 (bỏ qua đoạn dây xuống khoá hông), `face` S05 (không phóng to nên bỏ sót mắt).
 
-Vì sao mình mắc: ở 4 ảnh D còn lại dây an toàn đen rất nổi trên áo sáng, nên khi không thấy dải đen mình mặc định "không đeo". Thực ra "không thấy" (tóc che, tay che, đang thắt) khác với "thấy rõ không có".
+Vì sao mình mắc: khi không chắc, mình vội chọn `unknown` hoặc bỏ đối tượng để "an toàn", nhưng `unknown` chỉ đúng khi đã nhìn kỹ mà vẫn không thấy. Chọn `unknown` hay bỏ box mà chưa nhìn kỹ cũng là đoán.
 
-Lần sau tránh bằng cách: trước khi chọn `not_worn`, chỉ được vào vùng vai → hông đối diện và tự hỏi "mình có thấy **áo** ở đúng đường đó không?". Thấy áo mà không có đai → `not_worn`; bị che → `unknown`.
+Lần sau tránh bằng cách: với dây an toàn, dò cả đường vai → hông đối diện **và** vùng khoá; thấy áo trọn mà không có đai → `not_worn`, thấy một đoạn đai → `worn_*`, bị che hết → `unknown`. Trước khi bỏ một đối tượng hoặc ghi `unknown`, phóng to và tăng contrast một lần.
 
 ## 3. Ghi chú về disagreement_log
 
