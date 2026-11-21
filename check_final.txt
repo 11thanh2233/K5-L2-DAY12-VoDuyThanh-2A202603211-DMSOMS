@@ -1,0 +1,9 @@
+File: export_final.zip
+Ảnh: 22 · đã có frame_meta: 22 · số đối tượng: child_seat=14, face=9, face13=5, hand=11, infant_seat=4, object=10, person=12, phone=1
+Kết quả: 0 lỗi, 0 cảnh báo. Cảnh báo cần bạn tự xét, không tự động là sai.
+
+Ghi chú (Võ Duy Thanh, G11):
+- Không còn cảnh báo nào cần giải thích (0 lỗi, 0 cảnh báo).
+- Ca báo coach: S02 (em bé trong nôi, ghế phải xe), S03 (trẻ trong ghế trẻ em, rear_middle), S04 và S07 (trẻ trong ghế trẻ em, ghế phải xe). Theo GUIDE §3 không gán person cho trẻ; chỉ gán child_seat (occupied=unknown) / infant_seat.
+- Không vẽ face: S05 (người lớn quay mặt đi, không thấy mắt và mũi), D02 (tài xế quay hẳn đầu, chỉ thấy gáy và tai) — theo §4.5.
+- Ghế trống không vẽ box: S01 0, S02 1 (giữa), S03 0, S04 2 (giữa, trái xe), S05 0, S06 2 (giữa, trái xe), S07 1 (giữa), S08 1 (giữa).
